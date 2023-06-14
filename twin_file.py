@@ -1,5 +1,7 @@
 from Bio import SeqIO    # 48/306
 import gzip
+#from collections import defaultdict
+
 
 file_path = r'C:\Users\Vonji\Desktop\ModernSeqFormat\SRR003265.filt.fastq'  # Provide the correct file path here
 
@@ -23,3 +25,14 @@ with open(file_path, "r") as file:
         # Exit the loop after printing the first 20 records
         if count == 20:
             break
+
+#recs = SeqIO.parse(gzip.open('SRR003265.filt.fastq'), 'fastq') 
+#recs = SeqIO.parse(file, 'fastq')
+#cnt = defaultdict(int)
+
+#for rec in records:
+   #for letter in rec.seq:
+      #cnt[letter] += 1
+#tot = sum(cnt.values())
+#for letter, cnt_value in cnt.items():
+    #print('%s: %.2f %d' % (letter, 100. * cnt.value / tot, cnt_value))
